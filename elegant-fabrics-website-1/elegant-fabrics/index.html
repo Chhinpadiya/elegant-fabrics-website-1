@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Elegant Fabrics — Premium women's fabric store. Shop silk, cotton, chiffon, linen, velvet & bridal fabrics. Free delivery on orders over PKR 5,000.">
+  <meta name="keywords" content="fabric store, women's fabric, silk fabric, cotton fabric, chiffon, bridal fabric, Pakistani fabric store, Elegant Fabrics">
+  <meta name="author" content="Elegant Fabrics">
+  <meta property="og:title" content="Elegant Fabrics — Premium Women's Fabric Store">
+  <meta property="og:description" content="Discover Pakistan's finest fabric collection. Silk, cotton, chiffon, linen, velvet & bridal fabrics.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#8B3A52">
+  <title>Elegant Fabrics — Premium Women's Fabric Store</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     PROMO BANNER
+═══════════════════════════════════════════════ -->
+<div class="promo-banner" id="promoBanner">
+  🎉 Free delivery on orders over <strong>PKR 5,000</strong> &nbsp;·&nbsp; Use code <strong>SILK20</strong> for 20% off silk fabrics!
+  <button class="promo-close" id="promoBannerClose" aria-label="Close">×</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar-inner">
+
+    <a class="navbar-brand" href="#" data-page="home">
+      <div class="brand-icon">🌸</div>
+      <div>
+        <div class="brand-name">Elegant Fabrics</div>
+        <span class="brand-tagline">Premium Women's Collection</span>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a data-page="home">Home</a>
+      <a data-page="shop">Shop</a>
+      <a data-page="categories">Categories</a>
+      <a data-page="contact">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="nav-icon-btn" id="cartBtn" aria-label="Shopping cart" title="Cart">
+        🛒
+        <span class="cart-badge" style="display:none">0</span>
+      </button>
+      <button class="btn btn-whatsapp btn-sm" data-wa-general style="display:flex;align-items:center;gap:.4rem">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+<!-- Mobile Nav Drawer -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-links">
+    <a data-page="home">🏠 Home</a>
+    <a data-page="shop">🛍️ Shop All Fabrics</a>
+    <a data-page="categories">📂 Categories</a>
+    <a data-page="contact">📞 Contact Us</a>
+  </div>
+  <button class="btn btn-whatsapp" style="width:100%;justify-content:center" data-wa-general>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Order via WhatsApp
+  </button>
+  <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--gray-light)">
+    <div style="font-size:.8rem;color:var(--gray);margin-bottom:.5rem">📞 +92 300 123 4567</div>
+    <div style="font-size:.8rem;color:var(--gray)">📧 hello@elegantfabrics.pk</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: HOME
+═══════════════════════════════════════════════ -->
+<main id="page-home" class="page">
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="container hero-content">
+      <div class="hero-eyebrow">New Collection 2025</div>
+      <h1 class="hero-title">
+        Where <em>Every Thread</em><br>Tells a Story
+      </h1>
+      <p class="hero-desc">
+        Discover Pakistan's most exquisite fabric collection — from luxurious silks and delicate chiffons to rich velvets and timeless linens. Crafted for women who love elegance.
+      </p>
+      <div class="hero-cta">
+        <button class="btn btn-primary btn-lg" data-page="shop">
+          Shop Collection →
+        </button>
+        <button class="btn btn-outline btn-lg" data-wa-general>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Ask on WhatsApp
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-value">500+</div>
+          <div class="hero-stat-label">Fabric varieties</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">12K+</div>
+          <div class="hero-stat-label">Happy customers</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">15yrs</div>
+          <div class="hero-stat-label">Of excellence</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual Panel -->
+    <div class="hero-visual">
+      <div class="hero-bg"></div>
+      <div class="hero-circle">Pure<br>Elegance</div>
+
+      <!-- Floating product cards -->
+      <div class="hero-float">
+        <div class="fc-swatch" style="background:linear-gradient(135deg,#8B3A52,#c9a84c)"></div>
+        <div>
+          <span class="fc-name">Silk Brocade</span>
+          <span class="fc-price">PKR 2,400/m</span>
+        </div>
+      </div>
+      <div class="hero-float">
+        <div class="fc-swatch" style="background:linear-gradient(135deg,#fae8ed,#e8d48a)"></div>
+        <div>
+          <span class="fc-name">Cotton Lawn</span>
+          <span class="fc-price">PKR 420/m</span>
+        </div>
+      </div>
+      <div class="hero-float">
+        <div class="fc-swatch" style="background:linear-gradient(135deg,#6B2C3E,#8B3A52)"></div>
+        <div>
+          <span class="fc-name">Crushed Velvet</span>
+          <span class="fc-price">PKR 1,400/m</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Bar -->
+  <div class="features-bar">
+    <div class="container features-bar-inner">
+      <div class="feature-item">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <div><strong>Free Delivery</strong> <span>On orders over PKR 5,000</span></div>
+      </div>
+      <div class="feature-item">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <div><strong>100% Authentic</strong> <span>Verified premium fabrics</span></div>
+      </div>
+      <div class="feature-item">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <div><strong>Easy Returns</strong> <span>7-day hassle-free policy</span></div>
+      </div>
+      <div class="feature-item">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+        <div><strong>Same Day Dispatch</strong> <span>Order before 2 PM</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <section class="categories-section">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-eyebrow">Browse by Type</div>
+        <h2 class="section-title">Shop by Category</h2>
+        <p class="section-subtitle" style="margin:0 auto">From everyday cotton to opulent bridal silk — find exactly what your creation deserves.</p>
+      </div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="featured-section">
+    <div class="container">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem">
+        <div>
+          <div class="section-eyebrow">Hand-picked for You</div>
+          <h2 class="section-title">Featured Fabrics</h2>
+        </div>
+        <button class="btn btn-outline" data-page="shop">View All →</button>
+      </div>
+      <div class="product-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section class="why-us-section">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-eyebrow">Why Choose Us</div>
+        <h2 class="section-title">The Elegant Difference</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🌺</div>
+          <div class="why-title">Curated Selection</div>
+          <div class="why-desc">Every fabric in our collection is personally sourced and quality-tested by our expert team.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📏</div>
+          <div class="why-title">Sold by the Meter</div>
+          <div class="why-desc">Buy exactly what you need — from 1 meter to bulk orders for boutiques and designers.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💬</div>
+          <div class="why-title">WhatsApp Ordering</div>
+          <div class="why-desc">Chat directly with us on WhatsApp for personalized recommendations and seamless ordering.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🚚</div>
+          <div class="why-title">Nationwide Delivery</div>
+          <div class="why-desc">We deliver across Pakistan. International shipping available to UAE, UK and more.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🎨</div>
+          <div class="why-title">Color Matching</div>
+          <div class="why-desc">Our experts help you match colors and textures for perfect ensembles and coordinated sets.</div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💎</div>
+          <div class="why-title">Bridal Specialist</div>
+          <div class="why-desc">Dedicated bridal consultation service to help you find the perfect fabric for your special day.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div>
+        <div class="section-eyebrow">Customer Love</div>
+        <h2 class="section-title">What Our Customers Say</h2>
+      </div>
+      <div class="testimonials-track" id="testimonialsTrack"></div>
+    </div>
+  </section>
+
+  <!-- Banner CTA -->
+  <section class="banner-cta">
+    <div class="container banner-cta-inner">
+      <div class="banner-cta-text">
+        <h2>Bridal Season is Here 👰</h2>
+        <p>Explore our exclusive bridal collection. Banarasi, embroidered nets, and more — all in one place.</p>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <button class="btn btn-gold btn-lg" data-page="shop">Shop Bridal</button>
+        <button class="btn btn-whatsapp btn-lg" data-wa-general>Book Consultation</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: SHOP
+═══════════════════════════════════════════════ -->
+<main id="page-shop" class="page">
+  <div class="page-header">
+    <div class="container">
+      <div class="section-eyebrow">Our Collection</div>
+      <h1 class="section-title">All Fabrics</h1>
+      <div class="breadcrumb">
+        <a data-page="home">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Shop</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="shop-layout">
+    <div class="container">
+
+      <!-- Toolbar -->
+      <div class="shop-toolbar">
+        <div class="search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="search" id="shopSearch" placeholder="Search fabrics by name, type…" autocomplete="off">
+        </div>
+        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+          <span class="result-count" id="resultCount">Showing <strong>16</strong> fabrics</span>
+          <select class="sort-select" id="shopSort">
+            <option value="default">Sort: Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name">Name: A–Z</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Filters -->
+      <div class="filter-bar" id="filterBar"></div>
+
+      <!-- Grid -->
+      <div class="product-grid" id="shopGrid"></div>
+
+    </div>
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: CATEGORIES
+═══════════════════════════════════════════════ -->
+<main id="page-categories" class="page">
+  <div class="page-header">
+    <div class="container">
+      <div class="section-eyebrow">Browse</div>
+      <h1 class="section-title">Fabric Categories</h1>
+      <div class="breadcrumb">
+        <a data-page="home">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Categories</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:4rem 0;background:var(--ivory)">
+    <div class="container">
+
+      <!-- Silk -->
+      <div style="margin-bottom:4rem">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem">
+          <div>
+            <div class="section-eyebrow">Luxurious</div>
+            <h2 class="section-title" style="font-size:2rem">✨ Silk Fabrics</h2>
+            <p style="color:var(--gray);margin-top:.4rem">The queen of all fabrics — smooth, lustrous, and timeless.</p>
+          </div>
+          <button class="btn btn-outline" onclick="shopByCategory('Silk')">Shop Silk →</button>
+        </div>
+        <div class="product-grid" id="catSilk"></div>
+      </div>
+
+      <!-- Cotton -->
+      <div style="margin-bottom:4rem">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem">
+          <div>
+            <div class="section-eyebrow">Breathable & Natural</div>
+            <h2 class="section-title" style="font-size:2rem">🌿 Cotton Fabrics</h2>
+            <p style="color:var(--gray);margin-top:.4rem">Soft, comfortable, and perfect for everyday elegance.</p>
+          </div>
+          <button class="btn btn-outline" onclick="shopByCategory('Cotton')">Shop Cotton →</button>
+        </div>
+        <div class="product-grid" id="catCotton"></div>
+      </div>
+
+      <!-- Chiffon -->
+      <div style="margin-bottom:4rem">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem">
+          <div>
+            <div class="section-eyebrow">Light & Flowing</div>
+            <h2 class="section-title" style="font-size:2rem">🌸 Chiffon Fabrics</h2>
+            <p style="color:var(--gray);margin-top:.4rem">Ethereal, sheer drapes for graceful femininity.</p>
+          </div>
+          <button class="btn btn-outline" onclick="shopByCategory('Chiffon')">Shop Chiffon →</button>
+        </div>
+        <div class="product-grid" id="catChiffon"></div>
+      </div>
+
+      <!-- Bridal -->
+      <div style="margin-bottom:4rem;background:var(--blush-light);border-radius:var(--radius-lg);padding:3rem">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap;gap:1rem">
+          <div>
+            <div class="section-eyebrow">For Your Special Day</div>
+            <h2 class="section-title" style="font-size:2rem">👰 Bridal Collection</h2>
+            <p style="color:var(--gray);margin-top:.4rem">Opulent fabrics worthy of your most cherished moments.</p>
+          </div>
+          <button class="btn btn-primary" onclick="shopByCategory('Bridal')">Shop Bridal →</button>
+        </div>
+        <div class="product-grid" id="catBridal"></div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: CONTACT
+═══════════════════════════════════════════════ -->
+<main id="page-contact" class="page">
+  <div class="page-header">
+    <div class="container">
+      <div class="section-eyebrow">Get in Touch</div>
+      <h1 class="section-title">Contact Us</h1>
+      <div class="breadcrumb">
+        <a data-page="home">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Contact</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="contact-section">
+    <div class="container contact-grid">
+
+      <!-- Info Card -->
+      <div>
+        <div class="contact-info-card">
+          <h3>We'd love to hear from you 🌸</h3>
+          <p>Reach out for fabric inquiries, bulk orders, bridal consultations, or any questions.</p>
+
+          <div class="cdetail">
+            <div class="cdetail-icon">📞</div>
+            <div>
+              <span class="cdetail-label">Phone / WhatsApp</span>
+              <span class="cdetail-value">+92 300 123 4567</span>
+            </div>
+          </div>
+          <div class="cdetail">
+            <div class="cdetail-icon">📧</div>
+            <div>
+              <span class="cdetail-label">Email</span>
+              <span class="cdetail-value">hello@elegantfabrics.pk</span>
+            </div>
+          </div>
+          <div class="cdetail">
+            <div class="cdetail-icon">📍</div>
+            <div>
+              <span class="cdetail-label">Store Address</span>
+              <span class="cdetail-value">Shop 14, Fabric Market, Clifton, Karachi, Pakistan</span>
+            </div>
+          </div>
+          <div class="cdetail">
+            <div class="cdetail-icon">🕐</div>
+            <div>
+              <span class="cdetail-label">Store Hours</span>
+              <span class="cdetail-value">Mon–Sat: 10 AM – 8 PM</span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a class="social-link" href="#" title="Instagram" aria-label="Instagram">📸</a>
+            <a class="social-link" href="#" title="Facebook" aria-label="Facebook">👍</a>
+            <a class="social-link" href="#" title="TikTok" aria-label="TikTok">🎵</a>
+            <a class="social-link" href="#" title="YouTube" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+
+        <div style="margin-top:1.5rem">
+          <button class="btn btn-whatsapp" style="width:100%;justify-content:center;padding:1rem" data-wa-general>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat with us on WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrap">
+        <h3 style="font-size:1.4rem;margin-bottom:.4rem">Send a Message</h3>
+        <p style="color:var(--gray);font-size:.88rem;margin-bottom:1.75rem">We typically respond within a few hours.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="cfName">Full Name *</label>
+              <input class="form-control" id="cfName" type="text" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cfPhone">Phone / WhatsApp</label>
+              <input class="form-control" id="cfPhone" type="tel" placeholder="+92 300 000 0000">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cfEmail">Email Address *</label>
+            <input class="form-control" id="cfEmail" type="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cfSubject">Subject</label>
+            <select class="form-control" id="cfSubject">
+              <option value="">Select a topic…</option>
+              <option>Fabric Inquiry</option>
+              <option>Bulk / Wholesale Order</option>
+              <option>Bridal Consultation</option>
+              <option>Order Tracking</option>
+              <option>Return / Exchange</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cfMessage">Message *</label>
+            <textarea class="form-control" id="cfMessage" placeholder="Tell us what you're looking for, fabric type, quantity, occasion…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:1rem">
+            Send Message →
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Map placeholder -->
+  <div style="background:var(--blush-light);padding:3rem 0;border-top:1px solid var(--gray-light)">
+    <div class="container">
+      <div style="background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);height:300px;display:flex;align-items:center;justify-content:center;border:2px dashed var(--gray-light)">
+        <div style="text-align:center;color:var(--gray)">
+          <div style="font-size:3rem;margin-bottom:1rem">📍</div>
+          <div style="font-weight:600;font-size:1.1rem;color:var(--charcoal)">Shop 14, Fabric Market</div>
+          <div style="font-size:.9rem;margin-top:.3rem">Clifton, Karachi, Pakistan</div>
+          <a href="https://maps.google.com" target="_blank" class="btn btn-outline btn-sm" style="margin-top:1rem">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ═══════════════════════════════════════════════
+     CART SIDEBAR
+═══════════════════════════════════════════════ -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart">
+  <div class="cart-header">
+    <h2 class="cart-title">🛒 Your Cart</h2>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <div class="cart-empty">
+      <div class="cart-empty-icon">🛒</div>
+      <p>Your cart is empty</p>
+      <p style="font-size:.82rem;margin-top:.25rem">Discover our beautiful fabrics</p>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-subtotal">
+      <span class="cart-subtotal-label">Subtotal</span>
+      <span class="cart-subtotal-value" id="cartSubtotalValue">PKR 0</span>
+    </div>
+    <div style="font-size:.76rem;color:var(--gray);margin-bottom:.75rem;text-align:center">
+      Shipping calculated at checkout · Free over PKR 5,000
+    </div>
+    <div class="cart-footer-actions">
+      <button class="btn btn-whatsapp" style="justify-content:center" id="waCheckoutBtn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Order via WhatsApp
+      </button>
+      <button class="btn btn-outline" style="justify-content:center" onclick="closeCart()">Continue Shopping</button>
+    </div>
+  </div>
+</aside>
+
+<!-- ═══════════════════════════════════════════════
+     PRODUCT MODAL
+═══════════════════════════════════════════════ -->
+<div class="modal-overlay" id="productModal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <div class="modal-img" id="modalImage"></div>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="container footer-grid">
+
+      <!-- Brand -->
+      <div>
+        <div class="footer-brand-name">🌸 Elegant Fabrics</div>
+        <p class="footer-brand-desc">Pakistan's most trusted destination for premium women's fabrics. From everyday cotton to luxurious silk — we bring the finest threads to your fingertips.</p>
+        <div style="display:flex;gap:.6rem">
+          <a class="social-link" href="#" aria-label="Instagram" title="Instagram">📸</a>
+          <a class="social-link" href="#" aria-label="Facebook" title="Facebook">👍</a>
+          <a class="social-link" href="#" aria-label="TikTok" title="TikTok">🎵</a>
+          <a class="social-link" href="#" aria-label="YouTube" title="YouTube">▶️</a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <div class="footer-links">
+          <a data-page="home">Home</a>
+          <a data-page="shop">Shop All</a>
+          <a data-page="categories">Categories</a>
+          <a data-page="contact">Contact Us</a>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div>
+        <div class="footer-col-title">Categories</div>
+        <div class="footer-links">
+          <a onclick="shopByCategory('Silk')">Silk Fabrics</a>
+          <a onclick="shopByCategory('Cotton')">Cotton Fabrics</a>
+          <a onclick="shopByCategory('Chiffon')">Chiffon</a>
+          <a onclick="shopByCategory('Linen')">Linen</a>
+          <a onclick="shopByCategory('Velvet')">Velvet</a>
+          <a onclick="shopByCategory('Bridal')">Bridal Collection</a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <div class="footer-col-title">Stay Updated</div>
+        <p style="font-size:.82rem;margin-bottom:1rem;opacity:.7">Subscribe for new arrivals, exclusive discounts and style inspiration.</p>
+        <form data-newsletter>
+          <input class="footer-nl-input" type="email" placeholder="Enter your email…" required>
+          <button class="btn btn-rose btn-sm" type="submit" style="background:var(--rose);color:#fff;border-color:var(--rose);width:100%;justify-content:center">Subscribe →</button>
+        </form>
+        <div style="margin-top:1.5rem">
+          <div style="font-size:.78rem;opacity:.6;margin-bottom:.3rem">📞 +92 300 123 4567</div>
+          <div style="font-size:.78rem;opacity:.6;margin-bottom:.3rem">📧 hello@elegantfabrics.pk</div>
+          <div style="font-size:.78rem;opacity:.6">📍 Fabric Market, Clifton, Karachi</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container" style="display:contents">
+      <div class="footer-bottom-text">© 2025 Elegant Fabrics. All rights reserved. Made with 🌸 in Pakistan.</div>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Shipping Policy</a>
+        <a href="#">Returns</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════
+     UTILITIES
+═══════════════════════════════════════════════ -->
+
+<!-- WhatsApp Float -->
+<div class="whatsapp-float" id="waFloat">
+  <div class="wa-tooltip">Chat with us 💬</div>
+  <button class="wa-btn" id="waFloatBtn" aria-label="WhatsApp us" title="Chat on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </button>
+</div>
+
+<!-- Scroll to Top -->
+<button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top" title="Back to top">↑</button>
+
+<!-- Toast Container -->
+<div class="toast-container" id="toastContainer" role="region" aria-live="polite"></div>
+
+<!-- Script -->
+<script src="js/app.js"></script>
+</body>
+</html>
